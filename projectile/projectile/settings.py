@@ -51,7 +51,7 @@ THIRD_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
-
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -150,6 +150,8 @@ USE_I18N = True
 USE_TZ = True
 
 APPEND_SLASH = False
+
+AUTH_USER_MODEL = "accounts.User"
 
 
 # Static files (CSS, JavaScript, Images)
