@@ -197,7 +197,7 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "Task Management Backend",
     "DESCRIPTION": "Task Management API Endpoints.",
     "VERSION": "1.0.0",
-    "SCHEMA_PATH_PREFIX": "/api\v[0-9]",
+    "SCHEMA_PATH_PREFIX": "/api/v[0-9]",
 }
 
 CORS_ALLOWED_ORIGINS = [
