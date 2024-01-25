@@ -52,6 +52,7 @@ THIRD_PARTY_APPS = [
 
 PROJECT_APPS = [
     "accounts.apps.AccountsConfig",
+    "tasks.apps.TasksConfig",
 ]
 
 MIDDLEWARE = [
@@ -201,8 +202,8 @@ SPECTACULAR_SETTINGS = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
 ]
 
 SIMPLE_JWT = {
