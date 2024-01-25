@@ -7,13 +7,13 @@ from accounts.models import User
 
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
-    list_display = ["first_name", "last_name", "email", "is_superuser"]
+    list_display = ["first_name", "last_name", "email", "is_staff"]
     search_fields = ["email"]
     ordering = ["-email"]
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
 
-    # update the user form
+    # update the existing user
     fieldsets = (
         (None, {
             "fields": [
@@ -21,7 +21,7 @@ class UserAdmin(BaseUserAdmin):
                 "password"
             ]
         }),
-        ("Profile", {
+        ("Personal Info", {
             "fields": [
                 "first_name",
                 "last_name",
@@ -34,20 +34,21 @@ class UserAdmin(BaseUserAdmin):
                 "is_active",
                 "is_verified",
                 "is_superuser",
-            ]
-        }),
-        ("Groups and Permisions", {
-            "fields": [
                 "groups", 
                 "user_permissions"
             ]
         }),
+        ("Important dates", {
+            "fields": [
+                "last_login",
+            ]
+        })
     )
 
-    # create a new user form
+    # create a new user
     add_fieldsets = (
         (None, {
-            "classes": ["wide"],
+            "classes": ["wide",],
             "fields": [
                 "first_name",
                 "last_name",

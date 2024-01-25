@@ -17,4 +17,4 @@ class Command(BaseCommand):
                 last_name="Potter",
             )
 
-            self.stdout.write("Super user has been created.")
+            self.stdout.write("Superuser has been created.")
