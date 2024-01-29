@@ -39,8 +39,8 @@ urlpatterns = [
     path("api/docs/redoc", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
     # auth
     path("api/v1/auth", include("accounts.rest.urls")),
-    # tasks
-    path("api/v1/tasks", include("tasks.rest.urls")),
+    # me
+    path("api/v1/me", include("tasks.rest.urls")),
 ]
 
 if settings.DEBUG:
