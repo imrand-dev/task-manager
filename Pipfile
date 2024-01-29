@@ -20,6 +20,8 @@ django-debug-toolbar = "*"
 pillow = "*"
 psycopg2 = "*"
 djangorestframework-simplejwt = "*"
+django-cloudinary-storage = "*"
+cloudinary = "*"
 
 [dev-packages]
 
