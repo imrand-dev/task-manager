@@ -16,6 +16,7 @@
 * Git & GitHub for project version management.
 * PostgreSQL database for storing data.
 * Django templates, CSS, and Bootstrap for the frontend.
+* Hosted photos on [Cloudinary](https://cloudinary.com/).
 
 ## Features
 
@@ -109,16 +110,20 @@ So run this command kinda optional `pip install -r requirements/dev.txt`.
 
 ### Create a Superuser:
 
-I've already added a command that will generate a superuser with predefined fields, look at `projectile/accounts/management/commands/supruser.py`.
+I've already added a command that will generate a superuser with predefined fields.
 
 ```py
 >> python manage.py superuser
+
+then use this email and password
+Email - john@gmail.com
+Password - 123456
 ```
 
 If you want to create a superuser on your own, run this command instead.
 
 ```py
-python manage.py createsuperuser
+python manage.py create_superuser
 ```
 
 ### Run the Development Server:

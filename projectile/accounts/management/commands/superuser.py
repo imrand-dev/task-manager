@@ -10,11 +10,11 @@ class Command(BaseCommand):
             user_service = UserService()
 
             superuser = user_service.create_superuser(
-                email="imranxdoe@gmail.com",
+                email="john@gmail.com",
                 password1="123456",
                 password2="123456",
-                first_name="Imran",
-                last_name="Potter",
+                first_name="John",
+                last_name="Snow",
             )
 
-            self.stdout.write("Superuser has been created.")
+            self.stdout.write(self.style.SUCCESS("Superuser created successfully."))
