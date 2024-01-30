@@ -10,7 +10,7 @@ class CustomUserManager(BaseUserManager):
             raise ValueError(_("Password is required."))
 
         if password1 != password2:
-            raise ValueError(_("Password doesn't match."))
+            raise ValueError(_("Passwords don't match."))
         
         email = self.normalize_email(email)
 
